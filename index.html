@@ -10,22 +10,21 @@
   <div class="container">
     <h1>🎉 Happy Birthday Palak🎉</h1>
     <p class="message">
-      Today is special because **you** are special 💕  
+      Today is special because <strong>you</strong> are special 💕
       I hope this makes you smile.
     </p>
 
     <h2>📸 Memories</h2>
     <div class="gallery">
-      <img src="images/pic1.jpg" alt="Memory 1" >
-      <img src="images/pic2.jpg" alt="Memory 2" >
-      <img src="images/pic3.jpg" alt="Memory 3">
+      <img src="images/pic1.jpg" alt="Memory 1" onclick="openPhoto(this.src)" tabindex="0">
+      <img src="images/pic2.jpg" alt="Memory 2" onclick="openPhoto(this.src)" tabindex="0">
+      <img src="images/pic3.jpg" alt="Memory 3" onclick="openPhoto(this.src)" tabindex="0">
     </div>
 
-    <button onclick="showSurprise()">🎁 Click for a Surprise</button>
-    <p id="surprise"></p>
+    <button id="surpriseBtn">🎁 Click for a Surprise</button>
+    <p id="surprise" aria-live="polite"></p>
   </div>
 
-  <script src="/static/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
