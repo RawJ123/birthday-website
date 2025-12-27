@@ -3,7 +3,7 @@ console.log("website loaded successfully");
 function showSurprise() {
   const el = document.getElementById('surprise');
   if (!el) return;
-  el.textContent = "Surprise! Wishing you an amazing birthday full of joy and love 🎉💖. Extra special because it’s the day you were born. I just want you to know how much your presence brightens everything around you. Your smile, your kindness, and the little things you do mean more than you probably realize. I hope this birthday brings you as much happiness as you bring to others. I’m really grateful that you exist, and I hope today reminds you how special you truly are 💖  ";
+  el.textContent = "Surprise! Wishing you an amazing birthday full of joy and love 🎉💖  ";
   el.classList.add('visible');
 }
 
