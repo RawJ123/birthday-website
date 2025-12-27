@@ -1,0 +1,19 @@
+body{
+    margin:0;
+    background:linear-gradient(120deg,#ff9a9e,#fad0c4);
+}
+
+.container {
+    max-width: 900px;
+    margin:80px auto;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.gallery img {
+    width:250px;
+    border-radius:15px;
+    margin:10px;
+}
+
