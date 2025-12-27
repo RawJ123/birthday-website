@@ -273,4 +273,36 @@ button:hover {
   position: relative;
   z-index: 2;
 }
+/* Decorative emoji layout */
+.decorations {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.emoji {
+  font-size: 2.2rem;
+  margin: 0 10px;
+  display: inline-block;
+  animation: floatEmoji 4s ease-in-out infinite;
+}
+
+.heart {
+  animation-delay: 0s;
+}
+
+.star {
+  animation-delay: 1.5s;
+}
+
+/* Soft floating animation */
+@keyframes floatEmoji {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 
