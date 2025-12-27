@@ -31,4 +31,8 @@ function createStar() {
 
 /* Intervals (balanced & elegant) */
 setInterval(createHeart, 450);
-setInterval(createStar, 350);
+setInterval(createStar, 350);function showSurprise() {
+  document.getElementById("surprise").innerText =
+    "I’m really grateful for you 💖 Happy Birthday 🎂";
+}
+
