@@ -1,11 +1,130 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a2c2a;
+}
+
+/* Main Card */
+.container {
+  max-width: 850px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  padding: 45px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease;
+}
+
+/* Headings */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #3a1f1f;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin: 35px 0 20px;
+  color: #3a1f1f;
+}
+
+/* Message text */
+.message {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #4a2c2a;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
 .gallery img {
   width: 220px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
 }
 
 .gallery img:hover {
   transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Button */
+button {
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.05rem;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(45deg, #ff6f91, #ff9671);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Surprise text */
+#surprise {
+  margin-top: 22px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #3a1f1f;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .gallery img {
+    width: 180px;
+  }
+
+  .container {
+    padding: 30px;
+  }
 }
