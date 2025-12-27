@@ -32,7 +32,9 @@ function createStar() {
 /* Intervals (balanced & elegant) */
 setInterval(createHeart, 450);
 setInterval(createStar, 350);function showSurprise() {
+ document.getElementById("surpriseBtn").addEventListener("click", () => {
   document.getElementById("surprise").innerText =
-    "I’m really grateful for you 💖 Happy Birthday 🎂";
-}
+    "Surprise! 💖 Wishing you the happiest birthday filled with love, smiles, and beautiful moments 🎂✨";
+});
+
 
