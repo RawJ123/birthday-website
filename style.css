@@ -187,3 +187,90 @@ button:hover {
   position: relative;
   z-index: 1;
 }
+/* ===== Background layers ===== */
+.background-effects {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== Hearts ===== */
+.hearts, .stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  bottom: -30px;
+  width: 18px;
+  height: 18px;
+  background: rgba(255, 105, 180, 0.55);
+  transform: rotate(45deg);
+  animation: floatUp linear infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: rgba(255, 105, 180, 0.55);
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -9px;
+  left: 0;
+}
+
+.heart::after {
+  left: -9px;
+  top: 0;
+}
+
+/* ===== Stars ===== */
+.star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+  animation: starFloat linear infinite;
+  opacity: 0.8;
+}
+
+/* ===== Animations ===== */
+@keyframes floatUp {
+  from {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-120vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes starFloat {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-130vh);
+    opacity: 0;
+  }
+}
+
+/* Keep content above background */
+.container {
+  position: relative;
+  z-index: 2;
+}
+
